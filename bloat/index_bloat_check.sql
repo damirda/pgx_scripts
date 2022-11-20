@@ -97,5 +97,5 @@ FROM raw_bloat
 -- what shows up as bloated
 SELECT *
 FROM format_bloat
-WHERE ( bloat_pct > 50 and bloat_mb > 10 )
-ORDER BY bloat_pct DESC;
+WHERE bloat_pct >= 15
+ORDER BY bloat_pct DESC, bloat_mb DESC;
